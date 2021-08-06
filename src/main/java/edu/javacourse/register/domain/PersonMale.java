@@ -5,7 +5,7 @@ import java.util.List;
 public class PersonMale extends Person {
 
     private List<MarriageCertificate> marriageCertificates;
-    private List<BirthCertificate> birthCertificatesCertificates;
+    private List<BirthCertificate> birthCertificates;
 
     public List<MarriageCertificate> getMarriageCertificates() {
         return marriageCertificates;
@@ -15,11 +15,11 @@ public class PersonMale extends Person {
         this.marriageCertificates = marriageCertificates;
     }
 
-    public List<BirthCertificate> getBirthCertificatesCertificates() {
-        return birthCertificatesCertificates;
+    public List<BirthCertificate> getBirthCertificates() {
+        return birthCertificates;
     }
 
-    public void setBirthCertificatesCertificates(List<BirthCertificate> birthCertificatesCertificates) {
-        this.birthCertificatesCertificates = birthCertificatesCertificates;
+    public void setBirthCertificates(List<BirthCertificate> birthCertificates) {
+        this.birthCertificates = birthCertificates;
     }
 }
