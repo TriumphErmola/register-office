@@ -17,78 +17,78 @@ import java.util.List;
                         "LEFT JOIN FETCH p.birthCertificate bs")
 })
 
-public class Person {
+public abstract class Person{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "person_id")
-    private Long personId;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @Column(name = "patronymic")
-    private String patronymic;
-    @Column(name = "date_birth")
-    private LocalDate dateOfBirth;
-    @OneToOne(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person")
-    private BirthCertificate birthCertificate;
-    @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person")
-    private List<Passport> passports;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "person_id")
+private Long personId;
+@Column(name = "first_name")
+private String firstName;
+@Column(name = "last_name")
+private String lastName;
+@Column(name = "patronymic")
+private String patronymic;
+@Column(name = "date_birth")
+private LocalDate dateOfBirth;
+@OneToOne(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person")
+private BirthCertificate birthCertificate;
+@OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY, mappedBy = "person")
+private List<Passport> passports;
 
-    public Long getPersonId() {
+public Long getPersonId(){
         return personId;
-    }
+        }
 
-    public void setPersonId(Long personId) {
-        this.personId = personId;
-    }
+public void setPersonId(Long personId){
+        this.personId=personId;
+        }
 
-    public String getFirstName() {
+public String getFirstName(){
         return firstName;
-    }
+        }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+public void setFirstName(String firstName){
+        this.firstName=firstName;
+        }
 
-    public String getLastName() {
+public String getLastName(){
         return lastName;
-    }
+        }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+public void setLastName(String lastName){
+        this.lastName=lastName;
+        }
 
-    public String getPatronymic() {
+public String getPatronymic(){
         return patronymic;
-    }
+        }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
-    }
+public void setPatronymic(String patronymic){
+        this.patronymic=patronymic;
+        }
 
-    public LocalDate getDateOfBirth() {
+public LocalDate getDateOfBirth(){
         return dateOfBirth;
-    }
+        }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
+public void setDateOfBirth(LocalDate dateOfBirth){
+        this.dateOfBirth=dateOfBirth;
+        }
 
-    public BirthCertificate getBirthCertificate() {
+public BirthCertificate getBirthCertificate(){
         return birthCertificate;
-    }
+        }
 
-    public void setBirthCertificate(BirthCertificate birthCertificate) {
-        this.birthCertificate = birthCertificate;
-    }
+public void setBirthCertificate(BirthCertificate birthCertificate){
+        this.birthCertificate=birthCertificate;
+        }
 
-    public List<Passport> getPassports() {
+public List<Passport> getPassports(){
         return passports;
-    }
+        }
 
-    public void setPassports(List<Passport> passports) {
-        this.passports = passports;
-    }
-}
+public void setPassports(List<Passport> passports){
+        this.passports=passports;
+        }
+        }
